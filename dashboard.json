@@ -1,0 +1,2322 @@
+[
+    {
+        "id": "53644dd9cb514982",
+        "type": "tab",
+        "label": "Поток 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f1bc2c08b5b30806",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7052f442daac6b88",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "23ee892888924033",
+        "type": "ui_tab",
+        "name": "SmartCity Трубопроводы и Потребление",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8118ec399403ade3",
+        "type": "ui_group",
+        "name": "Сигналы",
+        "tab": "23ee892888924033",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aadf58e36e184e25",
+        "type": "ui_group",
+        "name": "Температуры трубопроводов",
+        "tab": "23ee892888924033",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "23f3b87e1d0a4de0",
+        "type": "ui_group",
+        "name": "Потребление воды",
+        "tab": "23ee892888924033",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "522b7f4dbd039a7a",
+        "type": "ui_tab",
+        "name": "SmartCity Состояние инфраструктуры",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3ce429f81a89b8cd",
+        "type": "ui_group",
+        "name": "Электросеть",
+        "tab": "522b7f4dbd039a7a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "690086c6f9a8ac27",
+        "type": "ui_group",
+        "name": "Отходы",
+        "tab": "522b7f4dbd039a7a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c6c79ec168fb68b4",
+        "type": "ui_group",
+        "name": "Транспорт",
+        "tab": "522b7f4dbd039a7a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "226a40ef5d6177cf",
+        "type": "ui_group",
+        "name": "Дорожное покрытие",
+        "tab": "522b7f4dbd039a7a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "142f1ef8ebc215f5",
+        "type": "ui_spacer",
+        "z": "53644dd9cb514982",
+        "name": "spacer",
+        "group": "226a40ef5d6177cf",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f6ca882a4da97e93",
+        "type": "ui_spacer",
+        "z": "53644dd9cb514982",
+        "name": "spacer",
+        "group": "226a40ef5d6177cf",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "259be2eeef86d086",
+        "type": "ui_group",
+        "name": "Окружающая среда",
+        "tab": "522b7f4dbd039a7a",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f0e283aa50010d9",
+        "type": "ui_group",
+        "name": "Потребление электричества",
+        "tab": "23ee892888924033",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8e098041600d5107",
+        "type": "ui_tab",
+        "name": "SmartCity Графики",
+        "icon": "timeline",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e75a50995b607711",
+        "type": "ui_group",
+        "name": "Температуры трубопроводов",
+        "tab": "8e098041600d5107",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8fea105c3469dee7",
+        "type": "ui_group",
+        "name": "Состояние электросети",
+        "tab": "8e098041600d5107",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "957dc36ad8717b34",
+        "type": "ui_group",
+        "name": "Дорожная инфраструктура",
+        "tab": "8e098041600d5107",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8bcbec9fc3d2d396",
+        "type": "ui_group",
+        "name": "Потребление",
+        "tab": "8e098041600d5107",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3b4006bd6b44235c",
+        "type": "data-generator",
+        "z": "53644dd9cb514982",
+        "name": "",
+        "field": "data",
+        "fieldType": "msg",
+        "syntax": "text",
+        "template": "{\n    \"pipeline\": {\n        \"temperature\": {{float 30 170 '0.0'}},\n        \"damage\": {{boolean}}\n    },\n    \"water_supply\": {\n        \"hot_pipe_temperature\": {{float 40 130 '0.0'}},\n        \"cold_pipe_temperature\": {{float 1 6 '0.0'}},\n        \"damage\": {{boolean}}\n    },\n    \"water_consumption\": {\n        \"hot_water\": {{float 0 0.1500 '0.000'}},\n        \"cold_water\": {{float 0 0.6934 '0.000'}}\n    },\n    \"energy_consumption\": {{float 0 15 '0.00'}},\n    \"power_grid\":{\n        \"volt\": {{float 190 250 '0.00'}},\n        \"ampere\": {{float 14 16  '0.00'}}\n    },\n    \"sewage_system\": {\n        \"pressure\": {{float 0 25  '0.0'}}\n    },\n    \"trash_can\" : {\n        \"fullness\": {{float 10 99.9  '0.0'}}\n    },\n    \"public_transport\":{\n        \"occupancy\": {{float 0 100  '0.0'}}\n    },\n    \"road_condition\":{\n        \"temperature\": {{float -20 45 '0.0'}},\n        \"precipitation_thickness\": {{float 0 10 '0.0'}}\n    },\n    \"IP_camera\":{\n        \"alarm\":{{boolean}}\n    },\n    \"sound_level\":{{float 0 70 '0.0'}},\n    \"air_quality\":{{float 0 100 '0.0'}}\n}",
+        "x": 820,
+        "y": 160,
+        "wires": [
+            [
+                "eaf18c8dc70180f3",
+                "c2a50e3f59d01ebf"
+            ]
+        ]
+    },
+    {
+        "id": "eaf18c8dc70180f3",
+        "type": "json",
+        "z": "53644dd9cb514982",
+        "name": "Parse JSON",
+        "property": "data",
+        "action": "",
+        "pretty": false,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "fe478171dee99903",
+                "d8be6784c8cb2f60",
+                "a2eb6f741c4f9317",
+                "4991da7e0458c77c"
+            ]
+        ]
+    },
+    {
+        "id": "4579141510a08e02",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Теплотрасса, тем-ра",
+        "func": "var current = flow.get(\"pipeline_temperature\");\nvar new_val = msg.data.pipeline.temperature\nif (flow.get(\"pipeline_damage\") != true){\n    if ((Math.abs(current - new_val))<=10) {\n        msg.payload = new_val;\n    } else {\n        msg.payload = current;\n    }\n} else {\n    msg.payload = 30;\n    flow.set(\"pipeline_temperature\", 30);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "10eb870766e5ec80",
+                "ff4e3aaefb453662"
+            ]
+        ]
+    },
+    {
+        "id": "d8be6784c8cb2f60",
+        "type": "change",
+        "z": "53644dd9cb514982",
+        "name": "Parse date time",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": " $now('[D01].[M01].[Y0001] [H01]:[m01]:[s01]', '+0300')",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 220,
+        "wires": [
+            [
+                "a64099bc06aae827"
+            ]
+        ]
+    },
+    {
+        "id": "a64099bc06aae827",
+        "type": "ui_text",
+        "z": "53644dd9cb514982",
+        "group": "8118ec399403ade3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Последнее обновление",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 990,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c65fed8f9df0e75e",
+        "type": "switch",
+        "z": "53644dd9cb514982",
+        "name": "Анализ счетчика",
+        "property": "count",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "29",
+                "v2t": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "5c9a0888bc162a0d",
+                "24fa0ff5376cd2e4"
+            ],
+            [
+                "dfc8d3d6e7176538"
+            ]
+        ]
+    },
+    {
+        "id": "5c9a0888bc162a0d",
+        "type": "change",
+        "z": "53644dd9cb514982",
+        "name": "Сброс счётчика",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "3b4006bd6b44235c"
+            ]
+        ]
+    },
+    {
+        "id": "dfc8d3d6e7176538",
+        "type": "change",
+        "z": "53644dd9cb514982",
+        "name": "Инкремент счётчика",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count",
+                "pt": "flow",
+                "to": "$flowContext(\"count\") + 1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "3b4006bd6b44235c"
+            ]
+        ]
+    },
+    {
+        "id": "c2a50e3f59d01ebf",
+        "type": "debug",
+        "z": "53644dd9cb514982",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "$flowContext(\"count\")",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5cbc0ec6990aa52c",
+        "type": "mqtt in",
+        "z": "53644dd9cb514982",
+        "name": "Launch",
+        "topic": "launch",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "f1bc2c08b5b30806",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "d588276353d02593",
+                "e5af134037788bce"
+            ]
+        ]
+    },
+    {
+        "id": "40ca76da77076f11",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Теплотрасса, деформация",
+        "func": "var current = flow.get(\"pipeline_damage\");\nif (msg.data.public_transport.occupancy%17==0) {\n    flow.set(\"pipeline_damage\", true);\n    msg.payload = true;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "8dfea513865d8563"
+            ]
+        ]
+    },
+    {
+        "id": "ca595c21b26145ab",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Водопровод, тем-ра ГВС",
+        "func": "var current = flow.get(\"water_supply_hot_pipe_temperature\");\nvar new_val = msg.data.water_supply.hot_pipe_temperature;\nif (flow.get(\"water_supply_damage\") != true){\n    if ((Math.abs(current - new_val))<=5) {\n        msg.payload = new_val;\n    } else {\n        msg.payload = current;\n    }\n} else {\n    msg.payload = 40;\n    flow.set(\"water_supply_hot_pipe_temperature\", 40);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 520,
+        "wires": [
+            [
+                "db529951233e7784",
+                "ead6aaf05ac055a4"
+            ]
+        ]
+    },
+    {
+        "id": "af75075861314df1",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Водопровод, тем-ра ХВС",
+        "func": "var current = flow.get(\"water_supply_cold_pipe_temperature\");\nvar new_val = msg.data.water_supply.cold_pipe_temperature;\nif (flow.get(\"water_supply_damage\") != true){\n    if ((Math.abs(current - new_val))<=1) {\n        msg.payload = new_val;\n    } else {\n        msg.payload = current;\n    }\n} else {\n    msg.payload = 1;\n    flow.set(\"water_supply_cold_pipe_temperature\", 1);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "51989a251bebf87e",
+                "aa2211a580041a9c"
+            ]
+        ]
+    },
+    {
+        "id": "b2815018f79d7dc1",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Водопровод, дефорамация",
+        "func": "var current = flow.get(\"water_supply_damage\");\nvar new_val = msg.data.water_supply.damage\nif (msg.data.public_transport.occupancy%11==0) {\n    flow.set(\"water_supply_damage\", true);\n    msg.payload = true;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "86353cdab5600af2"
+            ]
+        ]
+    },
+    {
+        "id": "4523d7fa136ca345",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Потребление воды, ГВС",
+        "func": "var current = flow.get(\"water_consumption_hot_water\");\nvar new_val = msg.data.water_consumption.hot_water;\nif (flow.get(\"water_supply_damage\")!=true){\n    new_val = current + new_val;\n    flow.set(\"water_consumption_hot_water\", new_val);\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 680,
+        "wires": [
+            [
+                "22d97af1ae111cc6",
+                "787c102795031e9f"
+            ]
+        ]
+    },
+    {
+        "id": "08b71a280fbcb872",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Потребление воды, ХВС",
+        "func": "var current = flow.get(\"water_consumption_cold_water\");\nvar new_val = msg.data.water_consumption.cold_water;\nif (flow.get(\"water_supply_damage\")!=true){\n    new_val = current + new_val;\n    flow.set(\"water_consumption_cold_water\", new_val);\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 720,
+        "wires": [
+            [
+                "7defc7a63e8514a9",
+                "e9ec2acffedd16c4"
+            ]
+        ]
+    },
+    {
+        "id": "f030522fddb833e5",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Потребление электр-ва, kW",
+        "func": "var current = flow.get(\"energy_consumption\");\nvar new_val = msg.data.energy_consumption;\nnew_val = current + new_val;\nnew_val = (parseInt(new_val * 100)) / 100;\nflow.set(\"energy_consumption\", new_val);\nmsg.payload = new_val;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 760,
+        "wires": [
+            [
+                "dd6104308de05b37",
+                "b1fcbd85e8a8ba36"
+            ]
+        ]
+    },
+    {
+        "id": "0e7a08b91be99436",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Напряжение сети, V",
+        "func": "var current = flow.get(\"power_grid_volt\");\nvar new_val = msg.data.power_grid.volt;\nif ((Math.abs(current - new_val))<=15) {\n    flow.set(\"power_grid_volt\", new_val);\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "2a4bee4bd60ce19d",
+                "079e17e31704f688"
+            ]
+        ]
+    },
+    {
+        "id": "f69a18e2e6abed84",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Напряжение сети, A",
+        "func": "msg.payload = msg.data.power_grid.ampere;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "b1c36f82a11cddf3",
+                "0d09cd420ae5f168"
+            ]
+        ]
+    },
+    {
+        "id": "4665974c72b3046d",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Канализация, давление",
+        "func": "var current = flow.get(\"sewage_system_pressure\");\nvar new_val = msg.data.sewage_system.pressure;\nif ((Math.abs(current - new_val))<=3) {\n    msg.payload = new_val;\n} else {\n    msg.payload = current + 1;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 720,
+        "wires": [
+            [
+                "c3b52ad809a2e434"
+            ]
+        ]
+    },
+    {
+        "id": "93c1b113a86fb02e",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Мусорный бак",
+        "func": "msg.payload = msg.data.trash_can.fullness;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "c922557cdf06d8c5"
+            ]
+        ]
+    },
+    {
+        "id": "949675663ba787cc",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Транспорт, загруженность",
+        "func": "msg.payload = msg.data.public_transport.occupancy;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "e40d668998eff525",
+                "e8f340785b16b2c7"
+            ]
+        ]
+    },
+    {
+        "id": "34b224a9ec29083d",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Дорога, тем-ра",
+        "func": "var current = flow.get(\"road_condition_temperature\");\nvar new_val = msg.data.road_condition.temperature;\nif ((Math.abs(current - new_val))<=10) {\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 560,
+        "wires": [
+            [
+                "5b027370f05f6413",
+                "b4f63569cc8c351a"
+            ]
+        ]
+    },
+    {
+        "id": "dab95fe80440a177",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Дорога, толщина осадков",
+        "func": "var current = flow.get(\"road_condition_precipitation_thickness\");\nvar new_val = msg.data.road_condition.precipitation_thickness;\nif ((Math.abs(current - new_val))<=2) {\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "e34a8c8e8597c880",
+                "70ec43b94c6d784f"
+            ]
+        ]
+    },
+    {
+        "id": "a25c3303d134fbe1",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "IP-камера, тревога",
+        "func": "var current = flow.get(\"IP_camera_alarm\");\nvar new_val = msg.data.IP_camera.alarm;\nif ((msg.data.public_transport.occupancy)%13==0) {\n    flow.set(\"IP_camera_alarm\", true);\n    msg.payload = true;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 640,
+        "wires": [
+            [
+                "7de24134b8bb566a"
+            ]
+        ]
+    },
+    {
+        "id": "8831d9f98d85e4ff",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Уровень звука",
+        "func": "var current = flow.get(\"sound_level\");\nvar new_val = msg.data.sound_level;\nif ((Math.abs(current - new_val))<=12) {\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 800,
+        "wires": [
+            [
+                "f3738db6bd8ced46"
+            ]
+        ]
+    },
+    {
+        "id": "d3593c631fc4cb4f",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Чистота воздуха",
+        "func": "var current = flow.get(\"air_quality\");\nvar new_val = msg.data.air_quality;\nif ((Math.abs(current - new_val))<=25) {\n    msg.payload = new_val;\n} else {\n    msg.payload = current;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 800,
+        "wires": [
+            [
+                "9ee0c8a2a2ae3799"
+            ]
+        ]
+    },
+    {
+        "id": "10fb301bdfd85c4b",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Запись переменных потока",
+        "func": "flow.set(\"pipeline_temperature\",msg.data.pipeline.temperature);\nflow.set(\"pipeline_damage\",false);\nflow.set(\"water_supply_hot_pipe_temperature\",msg.data.water_supply.hot_pipe_temperature);\nflow.set(\"water_supply_cold_pipe_temperature\",msg.data.water_supply.cold_pipe_temperature);\nflow.set(\"water_supply_damage\",false);\nflow.set(\"water_consumption_hot_water\",msg.data.water_consumption.hot_water);\nflow.set(\"water_consumption_cold_water\",msg.data.water_consumption.cold_water);\nflow.set(\"energy_consumption\",msg.data.energy_consumption);\nflow.set(\"power_grid_volt\",msg.data.power_grid.volt);\nflow.set(\"sewage_system_pressure\",msg.data.sewage_system.pressure);\nflow.set(\"trash_can_fullness\",msg.data.trash_can.fullness);\nflow.set(\"public_transport_occupancy\",msg.data.public_transport.occupancy);\nflow.set(\"road_condition_temperature\",msg.data.road_condition.temperature);\nflow.set(\"road_condition_precipitation_thickness\",msg.data.road_condition.precipitation_thickness);\nflow.set(\"IP_camera_alarm\",false);\nflow.set(\"sound_level\",msg.data.sound_level);\nflow.set(\"air_quality\",msg.data.air_quality);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "f69a18e2e6abed84",
+                "0e7a08b91be99436",
+                "ba3387685ec88893",
+                "949675663ba787cc",
+                "34b224a9ec29083d",
+                "dab95fe80440a177",
+                "a25c3303d134fbe1",
+                "d7b052dfe38ed160",
+                "4665974c72b3046d",
+                "93c1b113a86fb02e",
+                "8831d9f98d85e4ff",
+                "4579141510a08e02",
+                "40ca76da77076f11",
+                "26b76de77052e968",
+                "ca595c21b26145ab",
+                "af75075861314df1",
+                "b2815018f79d7dc1",
+                "c94db6dac6052349",
+                "4523d7fa136ca345",
+                "08b71a280fbcb872",
+                "f030522fddb833e5",
+                "d3593c631fc4cb4f"
+            ]
+        ]
+    },
+    {
+        "id": "fe478171dee99903",
+        "type": "switch",
+        "z": "53644dd9cb514982",
+        "name": "Проверка цикла",
+        "property": "count",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "10fb301bdfd85c4b"
+            ],
+            [
+                "f69a18e2e6abed84",
+                "0e7a08b91be99436",
+                "ba3387685ec88893",
+                "949675663ba787cc",
+                "34b224a9ec29083d",
+                "dab95fe80440a177",
+                "a25c3303d134fbe1",
+                "d7b052dfe38ed160",
+                "4665974c72b3046d",
+                "93c1b113a86fb02e",
+                "8831d9f98d85e4ff",
+                "4579141510a08e02",
+                "40ca76da77076f11",
+                "26b76de77052e968",
+                "ca595c21b26145ab",
+                "af75075861314df1",
+                "b2815018f79d7dc1",
+                "c94db6dac6052349",
+                "4523d7fa136ca345",
+                "08b71a280fbcb872",
+                "f030522fddb833e5",
+                "d3593c631fc4cb4f"
+            ]
+        ]
+    },
+    {
+        "id": "7ca5bf6f7b04d401",
+        "type": "trigger",
+        "z": "53644dd9cb514982",
+        "name": "Запуск цикла",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "0",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "c65fed8f9df0e75e"
+            ]
+        ]
+    },
+    {
+        "id": "7de24134b8bb566a",
+        "type": "ui_led",
+        "z": "53644dd9cb514982",
+        "order": 3,
+        "group": "8118ec399403ade3",
+        "width": 0,
+        "height": 0,
+        "label": "Контроль преступности",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Тревога",
+        "x": 440,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "8dfea513865d8563",
+        "type": "ui_led",
+        "z": "53644dd9cb514982",
+        "order": 4,
+        "group": "8118ec399403ade3",
+        "width": 0,
+        "height": 0,
+        "label": "Деформация теплотрассы",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Деформация",
+        "x": 920,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "86353cdab5600af2",
+        "type": "ui_led",
+        "z": "53644dd9cb514982",
+        "order": 5,
+        "group": "8118ec399403ade3",
+        "width": 0,
+        "height": 0,
+        "label": "Деформация водопровода",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ffffff",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Деформация",
+        "x": 920,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d588276353d02593",
+        "type": "change",
+        "z": "53644dd9cb514982",
+        "name": "Сброс счётчика",
+        "rules": [
+            {
+                "t": "set",
+                "p": "count",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "7ca5bf6f7b04d401"
+            ]
+        ]
+    },
+    {
+        "id": "10eb870766e5ec80",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Теплотрасса",
+        "group": "aadf58e36e184e25",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Теплотрасса",
+        "label": "°С",
+        "format": "{{value}}",
+        "min": "30",
+        "max": "170",
+        "colors": [
+            "#ffff00",
+            "#ff8040",
+            "#ff0000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 920,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "db529951233e7784",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Трубопровод ГВС",
+        "group": "aadf58e36e184e25",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Трубопровод ГВС",
+        "label": "°С",
+        "format": "{{value}}",
+        "min": "40",
+        "max": "130",
+        "colors": [
+            "#ffff00",
+            "#ff8040",
+            "#ff0000"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 930,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "51989a251bebf87e",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Трубопровод ХВС",
+        "group": "aadf58e36e184e25",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Трубопровод ХВС",
+        "label": "°С",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "6",
+        "colors": [
+            "#80ffff",
+            "#ffff80",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 930,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "22d97af1ae111cc6",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Потребление ГВС",
+        "group": "23f3b87e1d0a4de0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "ГВС",
+        "label": " m3",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "9.4900",
+        "colors": [
+            "#80ffff",
+            "#ffff80",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 930,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "7defc7a63e8514a9",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Потребление ХВС",
+        "group": "23f3b87e1d0a4de0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "ХВС",
+        "label": " m3",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "13.8700",
+        "colors": [
+            "#80ffff",
+            "#ffff80",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 930,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "dd6104308de05b37",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Электричество",
+        "group": "4f0e283aa50010d9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Электричество",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 920,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "2a4bee4bd60ce19d",
+        "type": "ui_text",
+        "z": "53644dd9cb514982",
+        "group": "3ce429f81a89b8cd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Напряжение сети",
+        "label": "Напряжение сети",
+        "format": "{{msg.payload}} V",
+        "layout": "row-spread",
+        "className": "",
+        "x": 410,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b1c36f82a11cddf3",
+        "type": "ui_text",
+        "z": "53644dd9cb514982",
+        "group": "3ce429f81a89b8cd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Сила тока сети",
+        "label": "Сила тока сети",
+        "format": "{{msg.payload}} A",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c3b52ad809a2e434",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Давление",
+        "group": "690086c6f9a8ac27",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Давление ливневой канализации",
+        "label": " bar",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "25",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 430,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c922557cdf06d8c5",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Наполненность мусором",
+        "group": "690086c6f9a8ac27",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Наполненность мусором",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 380,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "5b027370f05f6413",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Температура дороги",
+        "group": "226a40ef5d6177cf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Температура дороги",
+        "label": "°С",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "45",
+        "colors": [
+            "#00ffff",
+            "#888888",
+            "#ff8040"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 400,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e34a8c8e8597c880",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Толщина осадков",
+        "group": "226a40ef5d6177cf",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Толщина осадков",
+        "label": " cm",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "10",
+        "colors": [
+            "#80ffff",
+            "#ffff80",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 410,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f3738db6bd8ced46",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Уровень звука",
+        "group": "259be2eeef86d086",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Уровень звука",
+        "label": "dB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "70",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 420,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9ee0c8a2a2ae3799",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Уровень загрязненности воздуха",
+        "group": "259be2eeef86d086",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Уровень загрязненности воздуха",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 980,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "c15b24d608759796",
+        "type": "ui_toast",
+        "z": "53644dd9cb514982",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "ТРЕВОГА",
+        "name": "Преступник",
+        "x": 430,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d04ca511d38a53f7",
+        "type": "ui_toast",
+        "z": "53644dd9cb514982",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "ТРЕВОГА",
+        "name": "Деформация тепллотрассы",
+        "x": 970,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "26b76de77052e968",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Формирование уведомления",
+        "func": "if (msg.data.public_transport.occupancy%17==0) {\n    msg.payload = \"На участке теплотрассы произошла деформация. Возможно возникновение протечки. Бригада монтажников вызвана на место аварии.\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "d04ca511d38a53f7"
+            ]
+        ]
+    },
+    {
+        "id": "36684a03338444e8",
+        "type": "ui_toast",
+        "z": "53644dd9cb514982",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "ТРЕВОГА",
+        "name": "Деформация водопровода",
+        "x": 960,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "c94db6dac6052349",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Формирование уведомления",
+        "func": "if (msg.data.public_transport.occupancy%11==0) {\n    msg.payload = \"На участке водопровода произошла деформация. Возможно возникновение протечки. Бригада монтажников вызвана на место аварии.\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 640,
+        "wires": [
+            [
+                "36684a03338444e8"
+            ]
+        ]
+    },
+    {
+        "id": "e5af134037788bce",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Формирование уведомления",
+        "func": "if (msg.payload == '0') {\n    msg.payload = \"Получена команда остановки мониторинга. Показатели отражают последнюю итерацию.\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "ee7b8ee73bc82fde"
+            ]
+        ]
+    },
+    {
+        "id": "ee7b8ee73bc82fde",
+        "type": "ui_toast",
+        "z": "53644dd9cb514982",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Уведомление",
+        "name": "Отключение мониторига",
+        "x": 680,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "601bfd6dbda88e5c",
+        "type": "ui_toast",
+        "z": "53644dd9cb514982",
+        "position": "bottom right",
+        "displayTime": "5",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Уведомление",
+        "name": "Начало месяца",
+        "x": 860,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "24fa0ff5376cd2e4",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Формирование уведомления",
+        "func": "msg.payload = \"Наступил новый месяц. Показания счётчиков были переданы в соответствующие инстанции и аннулированы в системе для учёта следующего месяца.\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "601bfd6dbda88e5c"
+            ]
+        ]
+    },
+    {
+        "id": "e40d668998eff525",
+        "type": "ui_gauge",
+        "z": "53644dd9cb514982",
+        "name": "Загруженность",
+        "group": "c6c79ec168fb68b4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Загруженность транспорта за день",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff0000",
+            "#00ff00",
+            "#ff0000"
+        ],
+        "seg1": "65",
+        "seg2": "80",
+        "className": "",
+        "x": 420,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c561226c439f4f52",
+        "type": "ui_text",
+        "z": "53644dd9cb514982",
+        "group": "8118ec399403ade3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "День месяца",
+        "label": "День месяца",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 960,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a2eb6f741c4f9317",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Parse the counter",
+        "func": "msg.payload = flow.get(\"count\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 260,
+        "wires": [
+            [
+                "c561226c439f4f52"
+            ]
+        ]
+    },
+    {
+        "id": "d7b052dfe38ed160",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Формирование уведомления",
+        "func": "if ((msg.data.public_transport.occupancy)%13==0) {\n    msg.payload = \"Камера распознала преступника! На местоположение вызван наряд полиции.\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "c15b24d608759796"
+            ]
+        ]
+    },
+    {
+        "id": "ba3387685ec88893",
+        "type": "function",
+        "z": "53644dd9cb514982",
+        "name": "Мощность сети, W",
+        "func": "var new_val = msg.data.power_grid.ampere * flow.get(\"power_grid_volt\");\nmsg.payload = (parseInt(new_val * 100)) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "466584e25f56976f",
+                "24975ebbbda6b21f"
+            ]
+        ]
+    },
+    {
+        "id": "466584e25f56976f",
+        "type": "ui_text",
+        "z": "53644dd9cb514982",
+        "group": "3ce429f81a89b8cd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Мощность сети",
+        "label": "Мощность сети",
+        "format": "{{msg.payload}} W",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ff4e3aaefb453662",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Теплотрасса, тем-ра",
+        "group": "e75a50995b607711",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Теплотрасса, тем-ра",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "30",
+        "ymax": "170",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ead6aaf05ac055a4",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Водопровод, тем-ра ГВС",
+        "group": "e75a50995b607711",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Водопровод, тем-ра ГВС",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "40",
+        "ymax": "130",
+        "removeOlder": "30",
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff8040",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa2211a580041a9c",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Водопровод, тем-ра ХВС",
+        "group": "e75a50995b607711",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Водопровод, тем-ра ХВС",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "1",
+        "ymax": "6",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00ffff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "079e17e31704f688",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Напряжение сети, V",
+        "group": "8fea105c3469dee7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Напряжение сети, V",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": true,
+        "ymin": "190",
+        "ymax": "250",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00ff00",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 160,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d09cd420ae5f168",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Сила тока сети, A",
+        "group": "8fea105c3469dee7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Сила тока сети, A",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "14",
+        "ymax": "16",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffff00",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24975ebbbda6b21f",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Мощность сети, W",
+        "group": "8fea105c3469dee7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Мощность сети, W",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": true,
+        "ymin": "2660",
+        "ymax": "4000",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff8080",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 150,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4f63569cc8c351a",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Температура дороги",
+        "group": "957dc36ad8717b34",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Температура дороги",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "monotone",
+        "nodata": "",
+        "dot": true,
+        "ymin": "-20",
+        "ymax": "45",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#808080",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 160,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70ec43b94c6d784f",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Толщина осадков",
+        "group": "957dc36ad8717b34",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Толщина осадков",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 150,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8f340785b16b2c7",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Загруженность общ. транспорта ",
+        "group": "957dc36ad8717b34",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Загруженность общ. транспорта ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#008080",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 200,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "787c102795031e9f",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Потребление ГВС",
+        "group": "8bcbec9fc3d2d396",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "ГВС, m3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0080",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9ec2acffedd16c4",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Потребление ХВС",
+        "group": "8bcbec9fc3d2d396",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "ХВС, m3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#80ffff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1fcbd85e8a8ba36",
+        "type": "ui_chart",
+        "z": "53644dd9cb514982",
+        "name": "Потребление электр-ва",
+        "group": "8bcbec9fc3d2d396",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Электричество, kW",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#8000ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4991da7e0458c77c",
+        "type": "debug",
+        "z": "53644dd9cb514982",
+        "name": "Вывод JSON",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "data",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    }
+]
