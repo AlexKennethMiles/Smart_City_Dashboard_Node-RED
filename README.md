@@ -1,12 +1,69 @@
 # Система мониторинга интернета вещей умного города с помощью Node-RED
  
 ### Описание
-<details><summary>Стэк технологий</summary>
+<details><summary>Технологии</summary>
 
 ![изображение](https://user-images.githubusercontent.com/71231321/213417809-e6cd3bce-ad7b-4049-93e4-e784bfb850eb.png)
 ![изображение](https://user-images.githubusercontent.com/71231321/213417848-07358569-87ec-4e97-9a1e-e4ea24374bc8.png)
 ![изображение](https://user-images.githubusercontent.com/71231321/213417835-f52a2f64-b205-4233-96b7-0342b854efda.png)
 
+</details>
+
+<details><summary>Оборудование</summary>
+<ul>
+<details><summary>Пример системы мониторинга трубопровода на основе кабелей-датчиков "Non-metallic MultiSense"</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213426897-e7fc4e63-ed97-4739-ac78-247cc28b07f1.png)
+![изображение](https://user-images.githubusercontent.com/71231321/213425483-e33bafcb-1e0e-47bc-84df-626fb5171ee8.png)
+
+</details>
+<details><summary>Типовое решение автоматизации сбора показаний для разных объектов с применением УСПД</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425856-3a380801-97da-439f-83cf-8c4f56d94c8c.png)
+
+</details>
+<details><summary>Комплектация и характеристики электронно-оптических трансформаторов тока от компании "Профотек"</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425525-5d0c7d76-995d-444a-bcff-0e6a36713084.png)
+
+</details>
+<details><summary>Гидростатический датчик уровня "ECL Trafag"</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213428000-9db1118b-1dc3-4f55-b406-fe624ce6900b.png)
+
+</details>
+<details><summary>Ультразвуковой датчик наполненности мусорных баков “Unlight”</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213426459-3d59ef00-e3f2-4815-bfc3-5030081f51eb.png)
+
+</details>
+<details><summary>Датчик пассажиропотока "ПП-01"</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425562-b56fb517-55e7-4161-bc3a-8c31a186bc15.png)
+
+</details>
+<details><summary>Система дорожного мониторинга</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425574-1a4cdbc9-780c-4901-a49f-0b2a3c2b0934.png)
+
+</details>
+<details><summary>IP вызывная панель c распознаванием лица</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425597-056ef35c-7d8d-4125-8913-43b93bb6fbe6.png)
+
+</details>
+<details><summary>Датчик шума</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425603-5b0bebc2-aeb4-44df-83ae-09bad17c4633.png)
+
+</details>
+<details><summary>KLQ - Датчик / регулятор качества воздуха (VOC) канальный c присоединительным фланцем с активным выходом</summary>
+
+![изображение](https://user-images.githubusercontent.com/71231321/213425616-2c49169c-3ce3-4af0-b6e1-214ac0af86e7.png)
+
+</details>
+
+</ul>
 </details>
 
 <details><summary>Принцип работы</summary>
